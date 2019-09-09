@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './DashboardWord.css';
 
 class DashboardWord extends React.Component {

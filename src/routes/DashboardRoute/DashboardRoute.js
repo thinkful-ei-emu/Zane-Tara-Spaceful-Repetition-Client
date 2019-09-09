@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import LanguageService from '../../services/lanugages-service';
 import LanguagesService from '../../services/lanugages-service';
 import {Link,Redirect} from 'react-router-dom';
 import Button from '../.././components/Button/Button';
@@ -18,6 +17,7 @@ class DashboardRoute extends Component {
   }
   
   render() {
+   // eslint-disable-next-line eqeqeq
    if(this.state.language&& this.state.language.error=="Unauthorized request"){
 TokenServices.clearAuthToken();
     return <Redirect to='/login'/>
@@ -40,7 +40,6 @@ TokenServices.clearAuthToken();
    else{
      return(
       <section>
-      <h2></h2>
     </section>
 
      )
