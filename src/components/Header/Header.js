@@ -45,7 +45,7 @@ class Header extends Component {
         
           <div className="hero-area">
           
-            <h1><Link to="/">Apriende Espa&ntilde;ol!</Link></h1>
+            <h1 className='white-header'><Link className='white-header' to="/">Apriende Espa&ntilde;ol!</Link></h1>
             
           </div>
 
