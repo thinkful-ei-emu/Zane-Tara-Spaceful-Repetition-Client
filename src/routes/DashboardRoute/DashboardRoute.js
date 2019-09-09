@@ -3,6 +3,7 @@ import LanguageService from '../../services/lanugages-service';
 import LanguagesService from '../../services/lanugages-service';
 import {Link} from 'react-router-dom';
 import Button from '../.././components/Button/Button';
+import DashboardWord from '../../components/DashboardWord/DashboardWord';
 class DashboardRoute extends Component {
 
   state={
@@ -20,10 +21,14 @@ class DashboardRoute extends Component {
     console.log(this.state.language)
     return (
       <section className='dashboard-container'>
+        <div className='dashboard-upper'>
         <h2>{this.state.language.language.name}</h2>
-        <p>Total Correct Answers:{this.state.language.language.total_score}</p>
-        <p><Link to='/learn'><Button className=''>Practice</Button></Link></p>
-        <h3>Words to Practice</h3>
+        <p>Total correct answers: {this.state.language.language.total_score}</p>
+        <p><Link to='/learn'><Button className=''>Start practicing</Button></Link></p>
+        <h3>Words to practice</h3>
+        </div>
+
+        <DashboardWord words={this.state.language.words}/>
       </section>
     );
    }

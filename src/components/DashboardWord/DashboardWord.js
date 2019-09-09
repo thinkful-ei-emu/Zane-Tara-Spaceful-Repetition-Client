@@ -6,7 +6,7 @@ class DashboardWord extends React.Component {
   renderWordList = () => {
     const wordList = this.props.words.map((word, index) => {
       return (
-        <li className="dashword"><Link to="/learn">
+        <li className="dashword">
           <h4>{word.original}</h4>
           <p>
             correct answer count:{' '}
@@ -16,7 +16,7 @@ class DashboardWord extends React.Component {
             incorrect answer count:{' '}
             <span className="incorrect">{word.incorrect_count}</span>
           </p>
-        </Link>
+
         </li>
       );
     });
@@ -25,7 +25,6 @@ class DashboardWord extends React.Component {
   render() {
     return (
       <div className="word-list-area">
-        <h3>Your words:</h3>
         <ul className="wordlist">
           {this.renderWordList()}
         </ul>
