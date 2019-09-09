@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import LanguageService from '../../services/lanugages-service';
 import LanguagesService from '../../services/lanugages-service';
-import {Link} from 'react-router-dom';
+import {Link,Redirect} from 'react-router-dom';
 import Button from '../.././components/Button/Button';
 import DashboardWord from '../../components/DashboardWord/DashboardWord';
+import TokenServices from '../../services/token-service'
 class DashboardRoute extends Component {
 
   state={
@@ -17,7 +18,11 @@ class DashboardRoute extends Component {
   }
   
   render() {
-   if(this.state.language.language&&this.state.language.words){
+   if(this.state.language&& this.state.language.error=="Unauthorized request"){
+TokenServices.clearAuthToken();
+    return <Redirect to='/login'/>
+   }
+    if(this.state.language.language&&this.state.language.words){
     console.log(this.state.language)
     return (
       <section className='dashboard-container'>
