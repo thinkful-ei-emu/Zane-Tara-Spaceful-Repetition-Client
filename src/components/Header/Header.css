@@ -1,6 +1,6 @@
 /* 
 White: #FFFFRF
-Cream: #fff2e6
+Cream: #fffaf2
 Dark Blue: #568EA3
 Light Blue: #68C3D4
 Brown: #826251
@@ -23,6 +23,10 @@ nav {
   margin: auto;
   height: 50px;
   font-size: 20px;
+}
+
+.h1link {
+  color: white !important;
 }
 
 h1 {
