@@ -1,0 +1,37 @@
+/* 
+White: #FFFFRF
+Cream: #fff2e6
+Dark Blue: #568EA3
+Light Blue: #68C3D4
+Brown: #826251
+*/
+
+.nav-area {
+  width: 100%;
+  box-shadow: 0 4px 2px -2px #fffaf2;
+  background-color: #fffaf2;
+}
+.hero-area {
+  height: 150px;
+  margin-bottom: 20px;
+}
+nav {
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 12px;
+  max-width: 1000px;
+  margin: auto;
+  height: 50px;
+  font-size: 20px;
+}
+
+h1 {
+  padding-top: 40px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  font-size: 42px;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 10px black;
+}

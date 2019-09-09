@@ -3,6 +3,8 @@ import { Input, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom';
+import './LoginForm.css';
 
 class LoginForm extends Component {
   static defaultProps = {
@@ -43,16 +45,19 @@ class LoginForm extends Component {
   render() {
     const { error } = this.state
     return (
-      <form
-        className='LoginForm'
+      <form 
+        className='LoginForm login-register-box'
         onSubmit={this.handleSubmit}
       >
-        <div role='alert'>
+        <h2>
+          Login
+        </h2>
+        <div className="error" role='alert'>
           {error && <p>{error}</p>}
         </div>
-        <div>
+        <div className="username-input-area">
           <Label htmlFor='login-username-input'>
-            Username
+            Username: 
           </Label>
           <Input
             ref={this.firstInput}
@@ -61,9 +66,9 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className="password-input-area">
           <Label htmlFor='login-password-input'>
-            Password
+            Password: 
           </Label>
           <Input
             id='login-password-input'
@@ -72,6 +77,7 @@ class LoginForm extends Component {
             required
           />
         </div>
+        <Link to="/register">Don't have an account?</Link>
         <Button type='submit'>
           Login
         </Button>

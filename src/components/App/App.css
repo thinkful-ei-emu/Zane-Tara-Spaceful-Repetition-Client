@@ -1,7 +1,37 @@
 /* 
 White: #FFFFRF
-Cream: #FFE8D1
+Cream: #fffaf2
 Dark Blue: #568EA3
 Light Blue: #68C3D4
 Brown: #826251
 */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1495562569060-2eec283d3391?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background-position: center;
+  background-repeat: no-reapeat;
+  background-size: cover;
+}
+
+.App {
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, .7), transparent);
+  height: 100vh;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
