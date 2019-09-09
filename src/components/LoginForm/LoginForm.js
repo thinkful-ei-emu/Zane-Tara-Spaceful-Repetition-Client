@@ -67,8 +67,9 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <Link to="/register">Don't have an account?</Link>
-        <Button type="submit">Login</Button>
+        <footer>
+          <Button type="submit">Login</Button>{' '}
+        </footer>
       </form>
     );
   }

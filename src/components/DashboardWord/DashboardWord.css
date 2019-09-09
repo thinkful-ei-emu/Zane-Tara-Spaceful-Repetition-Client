@@ -1,0 +1,30 @@
+/* 
+White: #FFFFRF
+Cream: #fffaf2
+Dark Blue: #568EA3
+Light Blue: #68C3D4
+Brown: #826251
+*/
+
+.wordlist {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.word-list-area {
+  display: inline-block;
+  max-width: 1000px;
+  margin: 0 10px;
+}
+
+.dashword {
+  background-color: #FFFAF2;
+  list-style: none;
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 0 3 3 #FFFAF2;
+}
