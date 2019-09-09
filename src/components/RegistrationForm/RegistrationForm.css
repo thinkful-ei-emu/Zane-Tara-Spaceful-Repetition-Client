@@ -43,13 +43,13 @@ body{
   min-width: 40px;
 }
 .Button{
-  background-color:#826251;
-  color:#68c3d4;
+  background-color:#68C3D4;
+  color:black; 
   min-height: 40px;
   min-width: 80px;
   font-size: 16px;
   margin:10px;
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0 5px 2px #568ea3;
 }
 

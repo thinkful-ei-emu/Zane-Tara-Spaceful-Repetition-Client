@@ -16,7 +16,6 @@ class DashboardWord extends React.Component {
             incorrect answer count:{' '}
             <span className="incorrect">{word.incorrect_count}</span>
           </p>
-
         </li>
       );
     });

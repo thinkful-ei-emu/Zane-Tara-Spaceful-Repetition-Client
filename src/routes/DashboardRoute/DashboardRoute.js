@@ -24,7 +24,7 @@ class DashboardRoute extends Component {
         <div className='dashboard-upper'>
         <h2>{this.state.language.language.name}</h2>
         <p>Total correct answers: {this.state.language.language.total_score}</p>
-        <p><Link to='/learn'><Button className=''>Start practicing</Button></Link></p>
+        <p><Link to='/learn'><Button className='practice-button'>Start practicing</Button></Link></p>
         <h3>Words to practice</h3>
         </div>
 

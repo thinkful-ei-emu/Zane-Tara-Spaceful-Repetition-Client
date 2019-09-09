@@ -15,6 +15,10 @@ Brown: #826251
   height: 150px;
   margin-bottom: 20px;
 }
+
+.nav-username {
+  float: left;
+}
 nav {
   text-align: right;
   padding-right: 20px;
