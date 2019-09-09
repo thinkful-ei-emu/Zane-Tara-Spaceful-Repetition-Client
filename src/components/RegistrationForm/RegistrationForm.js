@@ -42,11 +42,12 @@ class RegistrationForm extends Component {
     return (
       <form
         onSubmit={this.handleSubmit}
+        className='registration-form'
       >
-        <div role='alert'>
+        <div role='alert' className='error'>
           {error && <p>{error}</p>}
         </div>
-        <div>
+        <div className='reg-input'>
           <Label htmlFor='registration-name-input'>
             Enter your name<Required />
           </Label>
@@ -57,7 +58,7 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className='reg-input'>
           <Label htmlFor='registration-username-input'>
             Choose a username<Required />
           </Label>
@@ -67,7 +68,7 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className='reg-input'>
           <Label htmlFor='registration-password-input'>
             Choose a password<Required />
           </Label>
