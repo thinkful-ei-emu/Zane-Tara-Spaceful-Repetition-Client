@@ -29,24 +29,29 @@ export class WordProvider extends Component {
     this.setState({ feedback })
   }
 
-  answer = guess=> {
-    LanguagesService.guess().then(res => {
+  answer = guess => {
+    return LanguagesService.guess(guess).then(res => {
       this.setFeedback(res);
-    })
+      this.setState({status: 'feedback'});
+      return res;
+    });
+    
   }
 
-  processLogout = () => {
+  next = () => {
   }
 
   render() {
+
     const value = {
-      user: this.state.user,
+      status: this.state.status,
       error: this.state.error,
+      feedback: this.state.feedback,
       setError: this.setError,
       clearError: this.clearError,
-      setUser: this.setUser,
-      processLogin: this.processLogin,
-      processLogout: this.processLogout,
+      setFeedback: this.setFeedback,
+      answer: this.answer,
+      next: this.next,
     }
     return (
       <WordContext.Provider value={value}>

@@ -23,10 +23,6 @@ class Question extends React.Component {
       answer: e.target.value
     })
   }
-
-  handleSubmit = () => {
-    this.context.answer(this.state.answer);
-  }
   
   render() {
     if (this.state.word) {
@@ -35,7 +31,7 @@ class Question extends React.Component {
           <h2>Translate the word:</h2>
           <span className="nextword">{this.state.word.nextWord}</span>
           <p>Your total score is: {this.state.word.totalScore}</p>
-          <form onSubmit={(e) => this.handleSubmit()}>
+          <form onSubmit={(e) => this.props.handleSubmit()}>
             <label for="learn-guess-input">What's the translation for this word? </label>
             <input onChange={(e)=>this.handleChange()} type="text" name="learn-guess-input" id="learn-guess-input" required value={this.state.answer}/>
             <Button type="submit">Submit your answer</Button>
