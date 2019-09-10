@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import Question from '../../components/Question/Question'
 
 class LearningRoute extends Component {
   render() {
     return (
-      <section>
-        implement and style me
+      <section className="learning-page">
+        <Question />
       </section>
     );
   }
 }
 
-export default LearningRoute
+export default LearningRoute;

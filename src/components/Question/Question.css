@@ -1,0 +1,37 @@
+/* 
+White: #FFFFRF
+Cream: #fffaf2
+Dark Blue: #568EA3
+Light Blue: #68C3D4
+Brown: #826251
+*/
+.learning-page {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.question-container {
+background-color: #fffaf2;
+text-align: center;
+display: block;
+border-radius: 2px;
+max-width: 500px;
+padding: 10px;
+}
+
+.question-container > h2 {
+  font-size: 20px;
+}
+
+.nextword {
+  font-size: 32px;
+}
+
+#learn-guess-input {
+  display: block;
+  clear: left;
+  font-size: 18px;
+  margin: 5px auto;
+}
