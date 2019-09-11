@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import Question from '../../components/Question/Question'
 import Feedback from '../../components/Feedback/Feedback';
-<<<<<<< HEAD
-=======
 import WordContext from '../../contexts/WordContext';
->>>>>>> 499a85271fa665ec948dc05618b585abbef92b90
 
 class LearningRoute extends Component {
   
