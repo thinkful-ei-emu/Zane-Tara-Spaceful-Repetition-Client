@@ -21,6 +21,20 @@ let LanguagesService={
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
+  },
+
+  guess(word) {
+    console.log(word);
+    return fetch(`${config.API_ENDPOINT}/language/guess`, {
+      method: 'POST',
+      headers: {
+        Authorization: `bearer ${TokenService.getAuthToken()}`,
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({guess: word})
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
   }
 }
 

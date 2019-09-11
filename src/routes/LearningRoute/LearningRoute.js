@@ -4,11 +4,17 @@ import Feedback from '../../components/Feedback/Feedback';
 import WordContext from '../../contexts/WordContext';
 
 class LearningRoute extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      feedback: null
+    }
+  }
   
   static contextType = WordContext;
 
-  handleSubmit = () => {
-    this.context.answer(this.state.answer)
+  handleSubmit = (answer) => {
+    this.context.answer(answer)
     .then(res => {
       this.setState({feedback: res})
     });

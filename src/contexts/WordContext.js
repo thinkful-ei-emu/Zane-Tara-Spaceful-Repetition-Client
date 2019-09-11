@@ -38,6 +38,7 @@ export class WordProvider extends Component {
   }
 
   answer = guess => {
+    console.log('answering!', guess);
     return LanguagesService.guess(guess).then(res => {
       this.setFeedback(res);
       this.setState({status: 'feedback'});

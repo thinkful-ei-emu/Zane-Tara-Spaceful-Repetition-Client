@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '../Button/Button';
 import './Question.css';
 import LanguagesService from '../../services/lanugages-service';
-import {Redirect} from 'react-router-dom';
 
 class Question extends React.Component {
   constructor(props) {
@@ -18,7 +17,13 @@ class Question extends React.Component {
     })
   }
 
+  handleSub = (event) => {
+    event.preventDefault();
+    this.props.handleSubmit(this.state.answer);
+  }
+
   handleChange = (e) => {
+    console.log('handlingChange');
     this.setState({
       answer: e.target.value
     })
@@ -31,9 +36,9 @@ class Question extends React.Component {
           <h2>Translate the word:</h2>
           <span className="nextword">{this.state.word.nextWord}</span>
           <p>Your total score is: {this.state.word.totalScore}</p>
-          <form onSubmit={(e) => this.props.handleSubmit()}>
+          <form onSubmit={this.handleSub}>
             <label for="learn-guess-input">What's the translation for this word? </label>
-            <input onChange={(e)=>this.handleChange()} type="text" name="learn-guess-input" id="learn-guess-input" required value={this.state.answer}/>
+            <input onChange={this.handleChange} type="text" name="learn-guess-input" id="learn-guess-input" required value={this.state.answer}/>
             <Button type="submit">Submit your answer</Button>
           </form>
           <p>You have answered this word correctly {this.state.word.wordCorrectCount} times.</p>
