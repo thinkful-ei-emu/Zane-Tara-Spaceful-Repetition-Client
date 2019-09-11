@@ -11,6 +11,7 @@ const WordContext = React.createContext({
   setFeedback: () => {},
   answer: () => {},
   next: () => {},
+  setWord: () => {}
 })
 
 export default WordContext
@@ -66,6 +67,8 @@ export class WordProvider extends Component {
       setFeedback: this.setFeedback,
       answer: this.answer,
       next: this.next,
+      word: this.state.word,
+      setWord: this.setWord
     }
     return (
       <WordContext.Provider value={value}>
