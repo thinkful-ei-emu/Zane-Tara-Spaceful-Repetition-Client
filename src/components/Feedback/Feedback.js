@@ -1,9 +1,14 @@
 import React from 'react';
+import WordContext from '../../contexts/WordContext';
+
+
 
  
 
 
 class Feedback extends React.Component{
+
+  static contextType=WordContext;
 
   response={
     "nextWord": "test-next-word-from-incorrect-guess",
@@ -12,6 +17,10 @@ class Feedback extends React.Component{
     "totalScore": 999,
     "answer": "test-answer-from-incorrect-guess",
     "isCorrect": false
+  }
+
+  next(){
+    this.context.setFeedback(null);
   }
 
 
@@ -24,6 +33,7 @@ class Feedback extends React.Component{
         <p>Total Score:{this.response.totalScore}</p>
         <p>Your Guess:{this.response.answer}</p>
         <p>Answer Correct:{this.response.isCorrect}</p>
+        <button onClick={this.next}>Next</button>
 
       </section>
     )
