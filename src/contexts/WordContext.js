@@ -5,6 +5,7 @@ const WordContext = React.createContext({
   status: null,
   error: null,
   feedback: null,
+  word: null,
   setError: () => {},
   clearError: () => {},
   setFeedback: () => {},
@@ -35,6 +36,10 @@ export class WordProvider extends Component {
 
   setFeedback = feedback => {
     this.setState({ feedback })
+  }
+
+  setWord = word => {
+    this.setState({word})
   }
 
   answer = guess => {

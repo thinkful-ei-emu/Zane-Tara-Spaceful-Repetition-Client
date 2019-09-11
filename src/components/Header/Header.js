@@ -44,7 +44,7 @@ class Header extends Component {
             : this.renderLoginLink()}
         </div>
           <div className="hero-area">
-          <Link className="h1link" to="/"><h1>Aprende Español</h1></Link>
+          <h1>Aprende Español</h1>
           </div>
 
       </header>

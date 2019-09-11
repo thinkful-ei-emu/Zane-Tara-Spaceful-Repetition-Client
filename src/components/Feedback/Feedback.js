@@ -33,7 +33,7 @@ class Feedback extends React.Component{
         <p>Total Score:{this.response.totalScore}</p>
         <p>Your Guess:{this.response.answer}</p>
         <p>Answer Correct:{this.response.isCorrect}</p>
-        <button onClick={this.next}>Next</button>
+        <button autoFocus onClick={this.next}>Next</button>
 
       </section>
     )
