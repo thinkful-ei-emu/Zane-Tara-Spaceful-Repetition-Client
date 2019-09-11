@@ -15,6 +15,14 @@ const WordContext = React.createContext({
 export default WordContext
 
 export class WordProvider extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      status: null,
+      error:  null,
+      feedback: null
+    }
+  }
 
   setError = error => {
     console.error(error)

@@ -5,7 +5,7 @@ import WordContext from '../../contexts/WordContext';
 
 class LearningRoute extends Component {
   
-  contextType = WordContext;
+  static contextType = WordContext;
 
   handleSubmit = () => {
     this.context.answer(this.state.answer)
