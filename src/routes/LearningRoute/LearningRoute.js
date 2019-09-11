@@ -19,6 +19,9 @@ class LearningRoute extends Component {
       this.setState({feedback: res})
     });
   }
+  next=()=>{
+    this.setState({feedback:null});
+  }
 
   render() {
     console.log(this.state.feedback)
@@ -31,7 +34,7 @@ class LearningRoute extends Component {
     if(this.state.feedback.wordCorrectCount!==null){
       return(
         <section className="learning-page">
-          <Feedback feedback={this.state.feedback}/>
+          <Feedback feedback={this.state.feedback} next={this.next} state={this.state}/>
         </section>
       )
     }
