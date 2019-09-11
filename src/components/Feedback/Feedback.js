@@ -47,12 +47,7 @@ componentDidMount() {
         <button autoFocus onClick={()=>this.props.next()}>Try another word!</button>
         </section>}
         
-        {/* <p>Times Correctly Guessed:{this.props.feedback.wordCorrectCount}</p>
-        <p>Times Incorrectly Guess:{this.props.feedback.wordIncorrectCount}</p> */}
-        {/* <div className='DisplayFeedback'><p>The correct translation for {this.context.word.nextWord} was {this.props.feedback.answer} and you chose</p></div> */}
-        {/* <p>Your Guess:{this.props.feedback.answer}</p> */}
-        {/* <p>Answer Correct:{this.props.feedback.isCorrect===true?"True":"False"}</p>
-        <button autoFocus onClick={()=>this.props.next()}>Next</button> */}
+       
         
        
         
