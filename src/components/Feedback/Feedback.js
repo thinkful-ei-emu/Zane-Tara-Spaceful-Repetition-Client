@@ -1,5 +1,6 @@
 import React from 'react';
 import WordContext from '../../contexts/WordContext';
+import LanguagesService from '../../services/lanugages-service';
 
 
 
@@ -10,14 +11,16 @@ class Feedback extends React.Component{
 
   static contextType=WordContext;
 
-  response={
-    "nextWord": "test-next-word-from-incorrect-guess",
-   "wordCorrectCount": 888,
-    "wordIncorrectCount": 111,
-    "totalScore": 999,
-    "answer": "test-answer-from-incorrect-guess",
-    "isCorrect": false
+  state = {
+    word: null,
+    answer: ''
   }
+
+componentDidMount() {
+  LanguagesService.getWord().then(res=>{
+    this.setState({word: res})
+  })
+}
 
   next(){
     this.context.setFeedback(null);
@@ -25,19 +28,26 @@ class Feedback extends React.Component{
 
 
   render(){
+
+    {console.log(this.state.word)}
+    if(this.state.word!==null){
     return(
       <section className='question-container'>
-        <p>Current Word:{this.response.nextWord}</p>
-        <p>Times Correctly Guessed:{this.response.wordCorrectCount}</p>
-        <p>Times Incorrectly Guess:{this.response.wordIncorrectCount}</p>
-        <p>Total Score:{this.response.totalScore}</p>
-        <p>Your Guess:{this.response.answer}</p>
-        <p>Answer Correct:{this.response.isCorrect}</p>
+        <p>Current Word:{this.state.word.original}</p>
+        <p>Times Correctly Guessed:{this.props.feedback.wordCorrectCount}</p>
+        <p>Times Incorrectly Guess:{this.props.feedback.wordIncorrectCount}</p>
+        <p>Total Score:{this.props.feedback.totalScore}</p>
+        <p>Your Guess:{this.props.feedback.answer}</p>
+        <p>Answer Correct:{this.props.feedback.isCorrect===true?"True":"False"}</p>
         <button onClick={this.next}>Next</button>
 
       </section>
-    )
+    )}
+    else {
+      return (<></>)
+    }
   }
+  
 
 }
 

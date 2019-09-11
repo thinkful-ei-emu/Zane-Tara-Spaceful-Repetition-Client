@@ -21,12 +21,25 @@ class LearningRoute extends Component {
   }
 
   render() {
+    console.log(this.state.feedback)
+    if(this.state.feedback===null)
     return (
       <section className="learning-page">
-        {(this.context.status!=="feedback") ? <Question handleSubmit={this.handleSubmit}/>
-        : <Feedback feedback={this.state.feedback}/> }
+          <Question handleSubmit={this.handleSubmit}/>
       </section>
     );
+    if(this.state.feedback.wordCorrectCount!==null){
+      return(
+        <section className="learning-page">
+          <Feedback feedback={this.state.feedback}/>
+        </section>
+      )
+    }
+    else{
+      return(
+        <></>
+      )
+    }
   }
 }
 
