@@ -18,7 +18,10 @@ class Question extends React.Component {
     LanguagesService.getWord().then(res=>{
       console.log(res);
       this.context.setWord(res)
-      this.setState({word: res})
+      this.setState({
+        word: res,
+        language: {totalScore: res.totalScore}
+      })
       console.log(this.context.word);
     })
   }
@@ -41,7 +44,7 @@ class Question extends React.Component {
         <div className="question-container">
           <h2>Translate the word:</h2>
           <span className="nextword">{this.state.word.nextWord}</span>
-          <p>Your total score is: {this.state.word.totalScore}</p>
+          <p>Your total score is: {this.state.language.totalScore}</p>
           <form onSubmit={this.handleSub}>
             <label for="learn-guess-input">What's the translation for this word?</label>
             <input autoFocus onChange={this.handleChange} type="text" name="learn-guess-input" id="learn-guess-input" required value={this.state.answer}/>
