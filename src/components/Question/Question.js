@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Button/Button';
 import './Question.css';
 import LanguagesService from '../../services/lanugages-service';
+import WordContext from  '../../contexts/WordContext';
 
 class Question extends React.Component {
   constructor(props) {
@@ -11,9 +12,14 @@ class Question extends React.Component {
       answer: ''
     }
   }
+
+  static contextType = WordContext;
   componentDidMount() {
     LanguagesService.getWord().then(res=>{
+      console.log(res);
+      this.context.setWord(res)
       this.setState({word: res})
+      console.log(this.context.word);
     })
   }
 
@@ -37,8 +43,8 @@ class Question extends React.Component {
           <span className="nextword">{this.state.word.nextWord}</span>
           <p>Your total score is: {this.state.word.totalScore}</p>
           <form onSubmit={this.handleSub}>
-            <label for="learn-guess-input">What's the translation for this word? </label>
-            <input onChange={this.handleChange} type="text" name="learn-guess-input" id="learn-guess-input" required value={this.state.answer}/>
+            <label for="learn-guess-input">What's the translation for this word?</label>
+            <input autoFocus onChange={this.handleChange} type="text" name="learn-guess-input" id="learn-guess-input" required value={this.state.answer}/>
             <Button type="submit">Submit your answer</Button>
           </form>
           <p>You have answered this word correctly {this.state.word.wordCorrectCount} times.</p>

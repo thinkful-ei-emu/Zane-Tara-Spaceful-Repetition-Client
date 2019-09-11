@@ -29,17 +29,20 @@ componentDidMount() {
 
   render(){
 
-    {console.log(this.state.word)}
+    {console.log(this.context.word)}
     if(this.state.word!==null){
     return(
+    
       <section className='question-container'>
-        <p>Current Word:{this.state.word.original}</p>
+        {console.log(this.context.word)}
+        <p>Current Word:{this.context.word}</p>
         <p>Times Correctly Guessed:{this.props.feedback.wordCorrectCount}</p>
         <p>Times Incorrectly Guess:{this.props.feedback.wordIncorrectCount}</p>
         <p>Total Score:{this.props.feedback.totalScore}</p>
         <p>Your Guess:{this.props.feedback.answer}</p>
         <p>Answer Correct:{this.props.feedback.isCorrect===true?"True":"False"}</p>
-        <button onClick={this.next}>Next</button>
+        <button autoFocus onClick={this.context.next}>Next</button>
+        
 
       </section>
     )}

@@ -5,11 +5,13 @@ const WordContext = React.createContext({
   status: null,
   error: null,
   feedback: null,
+  word: null,
   setError: () => {},
   clearError: () => {},
   setFeedback: () => {},
   answer: () => {},
   next: () => {},
+  setWord: ()=>{},
 })
 
 export default WordContext
@@ -37,6 +39,10 @@ export class WordProvider extends Component {
     this.setState({ feedback })
   }
 
+  setWord = word => {
+    this.setState({word})
+  }
+
   answer = guess => {
     console.log('answering!', guess);
     return LanguagesService.guess(guess).then(res => {
@@ -48,6 +54,7 @@ export class WordProvider extends Component {
   }
 
   next = () => {
+    this.setState({feedback:null})
   }
 
   render() {
@@ -61,6 +68,8 @@ export class WordProvider extends Component {
       setFeedback: this.setFeedback,
       answer: this.answer,
       next: this.next,
+      setWord:this.setWord,
+      word:this.word,
     }
     return (
       <WordContext.Provider value={value}>
