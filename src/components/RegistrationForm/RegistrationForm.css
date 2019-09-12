@@ -25,18 +25,18 @@ body{
   align-items: center;
   margin-left: auto;
   margin-right:auto;
-  width: 300px;
+  min-width: 350px;
+  max-width: 600px;
   min-height:320px;
   border-radius: 7px;
   box-shadow: 0 0 5px 2px #568ea3;
-  
 }
 
 .reg-input{
   display: flex;
   flex-direction: column;
   justify-content: center;  
-  align-items: center;
+  align-items: baseline;
   margin:5px;
   padding: 5px;
   min-height: 60px;
@@ -85,8 +85,8 @@ a:visited{
 }
 
 .Label{
-width:170px;
-font-size:16px;
+margin-right:15px;
+font-size:18px;
 }
 footer{
   display: flex;
@@ -97,9 +97,9 @@ footer{
 min-height: 30px;
 }
 
-@media only screen  and (min-width:700px){
+ @media only screen  and (min-width:700px){
 
-  .registration-form{
+  /* .registration-form{
     background-color:#fffaf2;
     color: black;
     display: flex;
@@ -113,20 +113,33 @@ min-height: 30px;
     border-radius: 7px;
     box-shadow: 0 0 5px 2px #568ea3;
     
-  }
+  } */
 
   .reg-input{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;  
-    align-items: center;
-    margin:5px;
+    justify-content:flex-end;  
+    align-items:center;
+    margin-right:125px;
     padding: 5px;
     min-height: 60px;
     min-width: 500px;
+    
   }
+  .login-input{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;  
+    align-items:center;
+    margin-right:0px;
+    padding: 5px;
+    min-height: 60px;
+    min-width: 500px;
 
-  .Label{
+  }
+}
+
+  /* .Label{
 font-size: 23px;
 min-width: 250px;
 margin:6px;
@@ -134,8 +147,8 @@ margin:6px;
 .Input{
   min-height: 40px;
   min-width:240px ;
-}
-
+} */ 
+/* 
 footer{
   margin-top:40px;
 }
@@ -153,7 +166,7 @@ footer{
     align-items: center;
     margin-left: auto;
     margin-right:auto;
-    min-width: 60%;
+    min-width: 45%;
     min-height:40vh;
     border-radius: 7px;
     box-shadow: 0 0 5px 2px #568ea3;
@@ -183,4 +196,4 @@ footer{
     margin-top: 50px;
   }
   
-}
+} */

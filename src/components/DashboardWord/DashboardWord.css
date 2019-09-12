@@ -35,13 +35,13 @@ Brown: #826251
   height: 150px;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px #568EA3;
+  box-shadow: 0 0 2px 2px rgb(105, 107, 107);
 }
 
 .dashword > p {
-  color: black;
+  color: #273259;
 }
 
 .dashword > h4 {
-  color: black;
+  color: #273259;
 }

@@ -49,8 +49,8 @@ class LoginForm extends Component {
           {error && <p>{error}</p>}
         </div>
         <span>To demo this app, log in with the credentials <i>admin</i> and <i>pass</i></span>
-        <div className="reg-input">
-          <Label htmlFor="login-username-input">Username:</Label>
+        <div className="reg-input login-input">
+          <Label htmlFor="login-username-input ">Username:</Label>
           <Input
             ref={this.firstInput}
             id="login-username-input"
@@ -58,7 +58,7 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <div className="reg-input">
+        <div className="reg-input login-input">
           <Label htmlFor="login-password-input">Password:</Label>
           <Input
             id="login-password-input"

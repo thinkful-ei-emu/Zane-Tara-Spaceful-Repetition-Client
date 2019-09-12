@@ -15,7 +15,7 @@ describe(`User story: Go to next word`, function() {
         method: 'GET',
         url: `/api/language/head`,
         status: 200,
-        response: 'fixture:language-head.json',
+        response: 'fixture:language-guess-generic.json',
       })
       .as('languageHeadRequest')
       .route({
