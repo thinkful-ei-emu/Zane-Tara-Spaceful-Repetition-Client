@@ -15,11 +15,16 @@ Brown: #826251
 .question-container {
 background-color: #fffaf2;
 text-align: center;
-display: block;
+align-items:center;
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
 border-radius: 2px;
-max-width: 500px;
+width: 400px;
+height: 400px;
 padding: 10px;
 }
+
 
 .question-container > h2 {
   font-size: 20px;

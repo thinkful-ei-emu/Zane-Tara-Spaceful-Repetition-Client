@@ -1,6 +1,7 @@
 import React from 'react';
 import WordContext from '../../contexts/WordContext';
 import LanguagesService from '../../services/lanugages-service';
+import Button from '../Button/Button';
 
 class Feedback extends React.Component {
   static contextType = WordContext;
@@ -38,9 +39,9 @@ class Feedback extends React.Component {
               {this.props.feedback.answer} and you chose {this.context.input}!
             </p>
           </div>
-          <button autoFocus onClick={() => this.props.next()}>
+          <Button autoFocus onClick={() => this.props.next()}>
             Try another word!
-          </button>
+          </Button>
         </div>
       );
     } else {
