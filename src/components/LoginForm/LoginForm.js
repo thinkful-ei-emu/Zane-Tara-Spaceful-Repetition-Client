@@ -3,7 +3,6 @@ import { Input, Label } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../contexts/UserContext';
 import Button from '../Button/Button';
-import { Link } from 'react-router-dom';
 import './LoginForm.css';
 
 class LoginForm extends Component {
@@ -49,6 +48,7 @@ class LoginForm extends Component {
         <div className="error" role="alert">
           {error && <p>{error}</p>}
         </div>
+        <span>To demo this app, log in with the credentials <i>admin</i> and <i>pass</i></span>
         <div className="reg-input">
           <Label htmlFor="login-username-input">Username:</Label>
           <Input

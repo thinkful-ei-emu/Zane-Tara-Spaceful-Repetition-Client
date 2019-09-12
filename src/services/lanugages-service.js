@@ -1,15 +1,14 @@
 import config from '../config';
-import TokenService from '../services/token-service'
+import TokenService from '../services/token-service';
 
-let LanguagesService={
-
+let LanguagesService = {
   getLanguage() {
     return fetch(`${config.API_ENDPOINT}/language`, {
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`
       }
-    }).then(res =>
-      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
 
@@ -18,24 +17,23 @@ let LanguagesService={
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`
       }
-    }).then(res =>
-      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
 
   guess(word) {
-    console.log(word);
     return fetch(`${config.API_ENDPOINT}/language/guess`, {
       method: 'POST',
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`,
-        'content-type': 'application/json',
+        'content-type': 'application/json'
       },
-      body: JSON.stringify({guess: word})
-    }).then(res =>
-      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+      body: JSON.stringify({ guess: word })
+    }).then((res) =>
+      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   }
-}
+};
 
-export default LanguagesService
+export default LanguagesService;

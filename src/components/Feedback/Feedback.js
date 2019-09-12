@@ -18,7 +18,6 @@ class Feedback extends React.Component {
   }
 
   render() {
-    console.log(this.props.feedback);
     if (this.state.word !== null) {
       return (
         <div className="question-container">
@@ -26,6 +25,7 @@ class Feedback extends React.Component {
             <p className="">
               Your total score is: {this.props.feedback.totalScore}
             </p>
+            {/*Display feedback based on their response */}
             {this.props.feedback.isCorrect === false ? (
               <h2>Good try, but not quite right :(</h2>
             ) : (
