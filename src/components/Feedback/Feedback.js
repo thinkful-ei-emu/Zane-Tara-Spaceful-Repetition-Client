@@ -31,7 +31,7 @@ class Feedback extends React.Component {
               </div>
               <div className="DisplayFeedback">
                 <p>
-                  The correct translation for {this.context.word.nextWord} was{' '}
+                  The correct translation for <span lang="es">{this.context.word.nextWord}</span> was{' '}
                   {this.props.feedback.answer} and you chose{' '}
                   {this.context.input}!
                 </p>

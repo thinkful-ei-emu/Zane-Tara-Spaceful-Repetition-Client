@@ -17,7 +17,7 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section aria-live="polite">
         <h2 className='reg-header'>Login</h2>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}

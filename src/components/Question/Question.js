@@ -43,7 +43,7 @@ class Question extends React.Component {
       return (
         <div className="question-container">
           <h2>Translate the word:</h2>
-          <span className="nextword">{this.state.word.nextWord}</span>
+          <span className="nextword" lang="es">{this.state.word.nextWord}</span>
           <p>Your total score is: {this.state.language.totalScore}</p>
           <form onSubmit={this.handleSub}>
             <label for="learn-guess-input">What's the translation for this word?</label>

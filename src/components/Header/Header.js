@@ -38,13 +38,13 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <div className="nav-area">
+        <div role="navigation" className="nav-area">
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
         </div>
           <div className="hero-area">
-          <h1>Aprende Español</h1>
+          <h1 lang="es">Aprende Español</h1>
           </div>
 
       </header>

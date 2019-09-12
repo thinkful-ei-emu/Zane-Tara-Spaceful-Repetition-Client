@@ -27,13 +27,13 @@ class LearningRoute extends Component {
     console.log(this.state.feedback)
     if(this.state.feedback===null)
     return (
-      <section className="learning-page">
+      <section aria-live="polite" className="learning-page">
           <Question handleSubmit={this.handleSubmit}/>
       </section>
     );
     if(this.state.feedback.wordCorrectCount!==null){
       return(
-        <section className="learning-page">
+        <section aria-live="polite" className="learning-page">
           <Feedback feedback={this.state.feedback} next={this.next} state={this.state}/>
         </section>
       )

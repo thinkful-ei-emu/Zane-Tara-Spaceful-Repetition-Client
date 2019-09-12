@@ -25,7 +25,7 @@ TokenServices.clearAuthToken();
     if(this.state.language.language&&this.state.language.words){
     console.log(this.state.language)
     return (
-      <section className='dashboard-container'>
+      <section aria-live="polite" className='dashboard-container'>
         <div className='dashboard-upper'>
         <h2>{this.state.language.language.name}</h2>
         <p>Total correct answers: {this.state.language.language.total_score}</p>

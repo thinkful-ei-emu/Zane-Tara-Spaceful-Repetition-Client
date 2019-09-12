@@ -15,7 +15,7 @@ class RegistrationRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section aria-live="polite">
         <p className='reg-para'>
           Practice learning a language with the spaced reptition revision technique.
         </p>
