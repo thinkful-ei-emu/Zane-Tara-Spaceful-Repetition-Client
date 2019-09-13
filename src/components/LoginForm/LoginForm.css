@@ -43,7 +43,6 @@ Brown: #826251
     /* min-width: 61%; */
     /* min-height:26vh; */
     border-radius: 7px;
-    box-shadow: 0 0 5px 2px #568ea3;
     font-size:20px;
   }
  }
@@ -61,7 +60,6 @@ Brown: #826251
       min-width: 362px;
       min-height:34vh;
       border-radius: 7px;
-      box-shadow: 0 0 5px 2px #568ea3;
       
     }
   } 

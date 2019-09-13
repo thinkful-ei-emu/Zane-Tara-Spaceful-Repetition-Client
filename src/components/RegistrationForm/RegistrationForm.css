@@ -43,14 +43,16 @@ body{
   min-width: 40px;
 }
 .Button{
-  background-color:#68C3D4;
-  color:#1f2847; 
+  background-color:#00517C;
+  color:white; 
+  border: 1px solid rgb(0, 61, 94);
   min-height: 40px;
   min-width: 80px;
   font-size: 18px;
   margin:10px;
   border-radius: 5px;
-  box-shadow: 0 0 1px 1px rgb(134, 136, 136);
+  
+  box-shadow: 0 0 2px 1px rgb(97, 99, 99);
 }
 
 .Button:hover{
