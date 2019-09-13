@@ -11,11 +11,12 @@ Brown: #826251
   font-family: 'Roboto', sans-serif;;
 }
 
-body {
+body{
   background-image: url('https://images.unsplash.com/photo-1495562569060-2eec283d3391?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
   background-position: center;
-  background-repeat: no-reapeat;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed; 
 }
 
 .App {

@@ -27,7 +27,7 @@ Brown: #826251
 }
 
 .dashword {
-  background-color: #FFFAF2;
+  background-color: #fffaf2;
   margin: 5px;
   list-style: none;
   display: inline-block;
@@ -35,13 +35,13 @@ Brown: #826251
   height: 150px;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgb(105, 107, 107);
+  box-shadow: 0 0 2px 1px rgb(134, 136, 136);
 }
 
 .dashword > p {
-  color: #273259;
+  color: #1f2847;
 }
 
 .dashword > h4 {
-  color: #273259;
+  color: #1f2847;
 }
