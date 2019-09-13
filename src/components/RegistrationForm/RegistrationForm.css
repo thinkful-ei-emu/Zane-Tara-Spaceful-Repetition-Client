@@ -36,7 +36,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;  
-  align-items: baseline;
+  align-items: inherit;
   margin:5px;
   padding: 5px;
   min-height: 60px;
@@ -81,6 +81,10 @@ a:visited{
   justify-content: center;
   align-items: center;
   text-shadow: 0 0 10px black;
+  margin-left: 34px;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
 
 }
 
@@ -95,6 +99,15 @@ footer{
 
 .Input{
 min-height: 30px;
+border-radius: 3px;
+}
+
+.aprende{
+  font-size:36px;
+}
+.hero-area {
+  height: 102px;
+  margin-bottom: 20px;
 }
 
  @media only screen  and (min-width:700px){
@@ -115,15 +128,20 @@ min-height: 30px;
     
   } */
 
+  .hero-area {
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
   .reg-input{
     display: flex;
     flex-direction: row;
     justify-content:flex-end;  
-    align-items:center;
-    margin-right:125px;
+    align-items:baseline;
+    margin-right:17px;
     padding: 5px;
     min-height: 60px;
-    min-width: 500px;
+    min-width: 366px;
     
   }
   .login-input{

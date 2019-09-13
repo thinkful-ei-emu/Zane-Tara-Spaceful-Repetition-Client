@@ -11,10 +11,10 @@ Brown: #826251
   box-shadow: 0 1px 2px rgb(134, 136, 136);
   background-color: #fffaf2;
 }
-.hero-area {
+/* .hero-area {
   height: 150px;
   margin-bottom: 20px;
-}
+} */
 
 .nav-username {
   float: left;
@@ -22,6 +22,7 @@ Brown: #826251
 nav {
   text-align: right;
   padding-right: 20px;
+  padding-left: 20px;
   padding-top: 12px;
   max-width: 1000px;
   margin: auto;
@@ -40,7 +41,7 @@ h1 {
   font-size: 42px;
   text-decoration: none;
   color: white !important;
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 15px black, 0 0 5px black;
   display: block;
 }
 
@@ -56,4 +57,10 @@ h1 {
     text-shadow: 0 0 10px black;
     display: block;
   
+}
+
+@media only screen and (min-width:700px){
+  .nav-area{
+    width:100%;
+  }
 }

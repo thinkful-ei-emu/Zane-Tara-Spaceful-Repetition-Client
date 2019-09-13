@@ -15,7 +15,7 @@ Brown: #826251
   align-items: center;
   margin-left: auto;
   margin-right:auto;
-  min-width: 350px;
+  min-width: 280px;
   max-width: 600px;
   min-height:300px;
   border-radius: 5px;
@@ -31,5 +31,39 @@ Brown: #826251
   .login-form{
     /* min-width: 80%; */
     font-size:20px;
+  
+    background-color:#fffaf2;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right:auto;
+    /* min-width: 61%; */
+    /* min-height:26vh; */
+    border-radius: 7px;
+    box-shadow: 0 0 5px 2px #568ea3;
+    font-size:20px;
   }
  }
+  @media only screen and (min-width:1200px){
+
+    .login-form{
+      background-color:#fffaf2;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right:auto;
+      min-width: 362px;
+      min-height:34vh;
+      border-radius: 7px;
+      box-shadow: 0 0 5px 2px #568ea3;
+      
+    }
+  } 
+
+  

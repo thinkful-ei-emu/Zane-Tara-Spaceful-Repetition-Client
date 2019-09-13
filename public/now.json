@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "Aprende",
+  "alias": "tara-and-zane-aprende",
   "routes": [
       {
         "src": "^/static/(.*)",

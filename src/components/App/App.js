@@ -21,6 +21,7 @@ export default class App extends Component {
   render() {
     const { hasError } = this.state;
     return (
+      <div className="background-shadow">
       <div className="App">
         <Header />
         <main role="main">
@@ -33,6 +34,7 @@ export default class App extends Component {
             <Route component={NotFoundRoute} />
           </Switch>
         </main>
+      </div>
       </div>
     );
   }

@@ -11,21 +11,17 @@ Brown: #826251
   font-family: 'Roboto', sans-serif;;
 }
 
-body{
-  background-image: url('https://images.unsplash.com/photo-1495562569060-2eec283d3391?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+body {
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, .5), transparent), url('https://images.unsplash.com/photo-1495562569060-2eec283d3391?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; 
 }
 
-.App {
-  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, .7), transparent);
-  height: 100vh;
-}
-
 main {
-  margin-bottom: 30px;
+  padding: 10px;
+  padding-bottom: 30px;
 }
 
 p {
