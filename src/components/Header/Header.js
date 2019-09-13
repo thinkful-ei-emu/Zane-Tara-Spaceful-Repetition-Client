@@ -43,7 +43,7 @@ class Header extends Component {
             : this.renderLoginLink()}
         </div>
         <div className="hero-area">
-          <h1 lang="es">Aprende Español</h1>
+          <h1 className="aprende" lang="es">Aprende Español</h1>
         </div>
       </header>
     );

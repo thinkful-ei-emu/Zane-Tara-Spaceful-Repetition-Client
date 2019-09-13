@@ -11,10 +11,10 @@ Brown: #826251
   box-shadow: 0 4px 2px -2px #fffaf2;
   background-color: #fffaf2;
 }
-.hero-area {
+/* .hero-area {
   height: 150px;
   margin-bottom: 20px;
-}
+} */
 
 .nav-username {
   float: left;
@@ -56,4 +56,10 @@ h1 {
     text-shadow: 0 0 10px black;
     display: block;
   
+}
+
+@media only screen and (min-width:700px){
+  .nav-area{
+    width:100%;
+  }
 }
