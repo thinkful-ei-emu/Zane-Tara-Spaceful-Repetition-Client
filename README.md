@@ -1,16 +1,5 @@
 # Spaced Repetition Capstone
 
-## Setup
-
-To setup the application
-
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
-
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
-
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
-
 ## Running project
 
 This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
@@ -45,3 +34,9 @@ npm run cypress:run
 ```
 
 This will save video recordings of the test runs in the directory `./cypress/videos/`.
+
+##About the app
+
+![Alt text](https://raw.githubusercontent.com/tarajeanne/image_repo/master/Screen%20Shot%202019-09-13%20at%201.49.30%20PM.png "Aprende Capstone")
+
+This app uses a spaced repetition algorithm to maximize learning vocabulary words in a foreign language. To log into the app for demo, log in as "admin" and "pass." Then, click "practice" to start learning some basic Spanish vocabulary!
